@@ -34,7 +34,7 @@ public class A1Novice {
 				 customerTotal = customerTotal + totalItemPrice;
 			 }
 			 
-			 String.format("%.2f", customerTotal);
+			 // String.format("%.2f", customerTotal);
 			 System.out.println(firstInitial + ". " + lastName + ": " + customerTotal);
 			 
 			}
