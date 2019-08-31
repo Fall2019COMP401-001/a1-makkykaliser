@@ -87,7 +87,7 @@ public class A1Adept {
 		}
 		// This code is outside the for loops
 		
-		System.out.println(customerTotals);
+		System.out.println(customerTotals[0]);
 		
 		
 		
