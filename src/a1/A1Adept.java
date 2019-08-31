@@ -9,7 +9,13 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
+		
+		
+		
+	// PART 1: READING THE ITEMS
 
+		
+		
 		// Empty variables to store the biggest/smallest/average values
 		String biggest = "";
 		String smallest = "";
@@ -30,6 +36,12 @@ public class A1Adept {
 			itemPrices[n] = scan.nextInt();
 		}
 		
+		
+		
+	// PART 2: READING THE CUSTOMERS
+		
+		
+		
 		// Variable to store number of customers
 		int totalCustomers = scan.nextInt();
 		
@@ -41,7 +53,8 @@ public class A1Adept {
 		
 		// Nested for loops to add customers and totals to respective arrays
 		
-		// This for loop adds customer names to respective array and finds # of purchased items
+		// This for loop iterates for every customer
+		// adds customer names to respective array and finds # of purchased items
 		for (int n = 0; n < totalCustomers; n++) {
 			String firstName = scan.next();
 			String lastName = scan.next();
@@ -53,7 +66,6 @@ public class A1Adept {
 			// finds price of item based on array index & multiplies by number of copies
 			for (int m = 0; m < purchasedItems; m++) {
 				double numberOfItem = scan.nextDouble();
-				// numberOfItem will get multiplied by price of item
 				String thisItem = scan.next();
 				int thisItemIndex = -1;
 				double thisItemPrice = 0;
@@ -67,13 +79,17 @@ public class A1Adept {
 				// This code is inside customer total for loop
 				thisItemPrice = itemPrices[thisItemIndex];
 				thisItemPrice = thisItemPrice * numberOfItem;
-				
-				//temporary print statement
-				System.out.println(thisItemPrice);
+				customerTotal = customerTotal + thisItemPrice;
 				
 			}
 			// This code is inside original for loop
+			customerTotals[n] = customerTotal;
 		}
+		// This code is outside the for loops
+		
+		System.out.println(customerTotals);
+		
+		
 		
 		
 	}
