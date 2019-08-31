@@ -105,7 +105,7 @@ public class A1Adept {
 		double smallestPrice = Double.MAX_VALUE;
 		String smallestCustomer = "";
 		for (int n = 0; n < totalCustomers; n++) {
-			if (smallestPrice < customerTotals[n]) {
+			if (smallestPrice > customerTotals[n]) {
 				smallestPrice = customerTotals[n];
 				smallestCustomer = customerNames[n];
 			}
