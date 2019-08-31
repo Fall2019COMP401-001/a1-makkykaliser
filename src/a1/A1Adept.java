@@ -33,7 +33,7 @@ public class A1Adept {
 		// For loop to add items and prices to the arrays
 		for (int n = 0; n < totalItems; n++) {
 			itemNames[n] = scan.next();
-			itemPrices[n] = scan.nextInt();
+			itemPrices[n] = scan.nextDouble();
 		}
 		
 		
