@@ -88,9 +88,43 @@ public class A1Adept {
 		// This code is outside the for loops
 		
 		
+	// PART 3: CALCULATIONS
 		
 		
+		// For loop to find biggest
+		double biggestPrice = -1;
+		String biggestCustomer = "";
+		for (int n = 0; n < totalCustomers; n++) {
+			if (biggestPrice < customerTotals[n]) {
+				biggestPrice = customerTotals[n];
+				biggestCustomer = customerNames[n];
+			}
+		}
 		
+		// For loop to find smallest
+		double smallestPrice = Double.MAX_VALUE;
+		String smallestCustomer = "";
+		for (int n = 0; n < totalCustomers; n++) {
+			if (smallestPrice < customerTotals[n]) {
+				smallestPrice = customerTotals[n];
+				smallestCustomer = customerNames[n];
+			}
+		}
 		
+		// For loop to find total + code to find average
+		double averageTotal = 0;
+		for (int n = 0; n < totalCustomers; n++) {
+			averageTotal = averageTotal + customerTotals[n];
+		}
+		averageTotal = averageTotal / totalCustomers;
+		
+		String smallestPriceString = String.format("%.2f", smallestPrice);
+		String biggestPriceString = String.format("%.2f", biggestPrice);
+		String averageString = String.format("%.2f", averageTotal);
+		
+		// Final print statements
+		System.out.println("Biggest: " + biggestCustomer + " (" + biggestPriceString + ")");
+		System.out.println("Smallest: " + smallestCustomer + " (" + smallestPriceString + ")");
+		System.out.println("Average: " + averageString);
 	}
 }
