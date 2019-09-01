@@ -118,6 +118,7 @@ public class A1Adept {
 		}
 		averageTotal = averageTotal / totalCustomers;
 		
+		// Formatting to 2 decimal places
 		String smallestPriceString = String.format("%.2f", smallestPrice);
 		String biggestPriceString = String.format("%.2f", biggestPrice);
 		String averageString = String.format("%.2f", averageTotal);
