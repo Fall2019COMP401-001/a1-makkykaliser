@@ -64,7 +64,7 @@ public class A1Jedi {
 				for (int l = 0; l < totalItems; l++) {
 					if (itemNames[l].equals(thisItem)) {
 						itemCopies[l] = itemCopies[l] + numberOfItem;
-						customersBought[l] = customersBought[l]++;
+						customersBought[l] = customersBought[l] + 1;
 					}
 				}
 			}
@@ -74,7 +74,7 @@ public class A1Jedi {
 			if (itemCopies[n] == 0) {
 				System.out.println("No customers bought " + itemNames[n]);
 			} else {
-				System.out.println(customersBought[n] + " customers bought" + itemCopies[n] + " " + itemNames[n]);
+				System.out.println(customersBought[n] + " customers bought " + itemCopies[n] + " " + itemNames[n]);
 			}
 			
 		}
