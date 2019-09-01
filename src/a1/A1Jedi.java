@@ -70,10 +70,10 @@ public class A1Jedi {
 						if ((currentCustomerForItem[l].equals(currentCustomer)) == false) {
 							customersBought[l] = customersBought[l] + 1;
 						}
-						currentCustomerForItem[l] = currentCustomer;
 						
 						
 					}
+					currentCustomerForItem[l] = currentCustomer;
 				}
 			}
 		}
