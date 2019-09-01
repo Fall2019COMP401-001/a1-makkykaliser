@@ -51,13 +51,15 @@ public class A1Jedi {
 		// Array to see the last customer who was recorded buying each item
 		String[] currentCustomerForItem = new String[totalItems];
 		
+		String currentCustomer = "";
+		
 		// For loop to see what customers bought
 		for (int n = 0; n < totalCustomers; n++) {
 			String firstName = scan.next();
 			String lastName = scan.next();
 			customerNames[n] = firstName + " " + lastName;
 			int purchasedItems = scan.nextInt();
-			String currentCustomer = customerNames[n];
+			currentCustomer = customerNames[n];
 			
 			// Scans items & number of copies
 			for (int m = 0; m < purchasedItems; m++) {
