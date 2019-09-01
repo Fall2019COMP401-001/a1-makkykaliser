@@ -78,9 +78,9 @@ public class A1Jedi {
 							customersBought[l] = customersBought[l] + 1;
 						}
 						
-						
+						currentCustomerForItem[l] = currentCustomer;
 					}
-					currentCustomerForItem[l] = currentCustomer;
+					
 				}
 			}
 		}
