@@ -67,7 +67,7 @@ public class A1Jedi {
 				for (int l = 0; l < totalItems; l++) {
 					if (itemNames[l].equals(thisItem)) {
 						itemCopies[l] = itemCopies[l] + numberOfItem;
-						if ((currentCustomerForItem[l].equals(currentCustomer)) == false) {
+						if (!currentCustomerForItem[l].equals(currentCustomer)) {
 							customersBought[l] = customersBought[l] + 1;
 						}
 						
