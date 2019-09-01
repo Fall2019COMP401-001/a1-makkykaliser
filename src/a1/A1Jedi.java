@@ -48,7 +48,8 @@ public class A1Jedi {
 		// Array to store customer names (Will not be used)
 		String[] customerNames = new String[totalCustomers];
 		
-		
+		// Array to see the last customer who was recorded buying each item
+		String[] currentCustomerForItem = new String[totalItems];
 		
 		// For loop to see what customers bought
 		for (int n = 0; n < totalCustomers; n++) {
@@ -56,6 +57,8 @@ public class A1Jedi {
 			String lastName = scan.next();
 			customerNames[n] = firstName + " " + lastName;
 			int purchasedItems = scan.nextInt();
+			String currentCustomer = customerNames[n];
+			
 			// Scans items & number of copies
 			for (int m = 0; m < purchasedItems; m++) {
 				int numberOfItem = scan.nextInt();
@@ -64,7 +67,12 @@ public class A1Jedi {
 				for (int l = 0; l < totalItems; l++) {
 					if (itemNames[l].equals(thisItem)) {
 						itemCopies[l] = itemCopies[l] + numberOfItem;
-						customersBought[l] = customersBought[l] + 1;
+						if (!currentCustomerForItem[l].equals(currentCustomer)) {
+							customersBought[l] = customersBought[l] + 1;
+						}
+						currentCustomerForItem[l] = currentCustomer;
+						
+						
 					}
 				}
 			}
@@ -78,7 +86,7 @@ public class A1Jedi {
 			}
 			
 		}
-		// y	
+			
 				
 	}
 }
